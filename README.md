@@ -1,38 +1,22 @@
 # m7l1d4-componentes-practica
 
-This template should help get you started developing with Vue 3 in Vite.
+En este ejercicio se ponen en práctica el uso de Props y Eventos (Emits) para manejar la comunicación entre componentes padres e hijos.
+También se observa, a través de `console.log`, el comportamieto de 3 distintos Hooks del ciclo de vida de los componentes en Vue.
 
-## Recommended IDE Setup
+## Cómo ejecutar el proyecto
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Recommended Browser Setup
-
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
+### Instalar dependencias
 
 ```sh
 pnpm install
 ```
 
-### Compile and Hot-Reload for Development
+### Compilar y ver cambios en tiempo real
 
 ```sh
 pnpm dev
 ```
 
-### Compile and Minify for Production
+## Captura de pantalla mostrando los Hooks del ciclo de vida
 
-```sh
-pnpm build
-```
+![Capturas](./captura-consola-navegador.png)

@@ -4,6 +4,10 @@ import { Icon } from '@iconify/vue';
 import Hijo from './Hijo.vue';
 
 const mensajeHijo = ref('')
+const tareas = ref([
+  { id: 1, texto: 'Aprender sobre las Props', urgente: true },
+  { id: 2, texto: 'Dominar los Emits (Events)', urgente: false }
+])
 
 const handleRespuesta = (msg) => {
   mensajeHijo.value = msg
@@ -32,7 +36,12 @@ onBeforeUnmount(() => {
     <button class="btn btn-warning btn-sm mb-3" @click="mensajeHijo = ''" aria-label="Limpiar mensaje">
       <Icon icon="ic:outline-cleaning-services" width="24" height="24" />
     </button>
-    <Hijo mensaje="Msj desde el padre: Soy tu padre" @respuesta-hijo="handleRespuesta" />
+    <div class="row row-cols-1 row-cols-md-2 g-3">
+      <div class="col" v-for="tarea in tareas" :key="tarea.id">
+        <Hijo mensaje="Msj desde el padre: Soy tu padre" @respuesta-hijo="handleRespuesta" :nombreTarea="tarea.texto"
+          :urgente="tarea.urgente" :id="tarea.id" />
+      </div>
+    </div>
   </div>
 </template>
 
